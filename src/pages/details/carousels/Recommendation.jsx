@@ -8,7 +8,6 @@ const Recommendation = ({ mediaType, id }) => {
     `/${mediaType}/${id}/recommendations`
   );
 
-  console.log(data?.results.length);
   if (data?.results.length == 0) return;
 
   return (

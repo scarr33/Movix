@@ -11,8 +11,6 @@ const VideosSection = ({ data, loading }) => {
   const [show, setShow] = useState(false);
   const [videoId, setVideoId] = useState(null);
 
-  if (data?.results.length === 0) return;
-
   const loadingSkeleton = () => {
     return (
       <div className="skItem">
@@ -22,6 +20,8 @@ const VideosSection = ({ data, loading }) => {
       </div>
     );
   };
+
+  if (data?.results.length === 0) return;
 
   return (
     <div className="videosSection">
